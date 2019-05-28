@@ -36,8 +36,23 @@ end
 
 # EDIT - DISPLAY A FORM TO EDIT A PIZZA ORDER'S DETAILS
 
+get '/pizza-orders/:id/edit' do
+  @order = PizzaOrder.find(params[:id])
+  erb(:edit)
+end
 
 # UPDATE - UPDATES A DATABASE ENTRY FOR THE EDITED PIZZA ORDER
 
+post '/pizza-orders/:id' do
+  @order = PizzaOrder.new(params)
+  @order.update()
+  redirect to '/pizza-orders'
+end
 
 # DELETE - DELETES A PIZZA ORDER FROM THE THE DATABASE
+
+post '/pizza-orders/:id/delete' do
+  delete_order = PizzaOrder.find(params[:id])
+  delete_order.delete()
+  redirect to '/pizza-orders'
+end
