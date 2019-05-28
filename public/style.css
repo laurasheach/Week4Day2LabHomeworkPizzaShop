@@ -1,0 +1,39 @@
+body {
+  background-color: lightgreen;
+  font-family: 'Poppins', sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  color: darkgreen;
+}
+
+p, a {
+  font-family: 'Poppins', sans-serif;
+  color: darkgreen;
+  display: flex;
+  align-items: center;
+
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.order-summary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 20px;
+
+}

@@ -1,10 +1,14 @@
+<div class="order-summary">
 <% for order in @orders %>
-  <p>Name:
+<div class="order">
+  <p><strong>Name:</strong>   
     <%= order.pretty_name() %></p>
-  <p>Order:
+  <p><strong>Order:</strong>
     <%= order.quantity()%>
     x
     <%= order.topping()%></p>
     <p><a href="/pizza-orders/<%= order.id %>">Show Order</a></p>
     <hr />
+    </div>
 <% end %>
+</div>

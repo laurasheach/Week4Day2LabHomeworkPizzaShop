@@ -4,6 +4,10 @@ require( 'pry' )
 require_relative('./models/pizza_order')
 also_reload('./models/*')
 
+get '/' do
+  erb(:welcome)
+end
+
 # INDEX - DISPLAY ALL PIZZA
 
 get '/pizza-orders' do

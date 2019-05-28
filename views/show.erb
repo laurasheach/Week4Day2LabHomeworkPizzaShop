@@ -1,12 +1,11 @@
-<p>Name: <%= @order.pretty_name %> </p>
-<p>Quantity: <%= @order.quantity %> </p>
-<p>Topping: <%= @order.topping %> </p>
+<p><strong>Name:</strong> <%= @order.pretty_name %></p>
+<p><strong>Quantity:</strong> <%= @order.quantity %></p>
+<p><strong>Topping:</strong> <%= @order.topping %></p>
 
-
-<form method="get" action="/pizza-orders/<%= @order.id %>/edit" >
-  <input type="submit" value="Edit Order"/>
+<form method="get" action="/pizza-orders/<%= @order.id %>/edit">
+<input type="submit" value="Edit Order"/>
 </form>
 
-<form method="post" action="/pizza-orders/<%= @order.id %>/delete" >
-  <input type="submit" value="Delete Order"/>
+<form method="post" action="/pizza-orders/<%= @order.id %>/delete">
+<input type="submit" value="Delete Order"/>
 </form>

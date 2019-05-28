@@ -7,8 +7,8 @@
 
   <label for="pizza-select">Select a Pizza:</label>
   <select id="pizza-select" name="topping">
-    <option value="Margherita">Margherita</option>
-    <option value="Hawaiian">Hawaiian</option>
+    <option "selected" if <% @order.topping %> == "Margherita" value="Margherita" end>Margherita</option>
+    <option "selected" if <% @order.topping %> == "Hawaiian" value="Hawaiian" end>Hawaiian</option>
   </select>
 
   <label for="quantity">Quantity</label>
